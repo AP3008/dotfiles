@@ -30,7 +30,6 @@ sketchybar --default "${default[@]}"
 
 ##### Left Side Items #####
 
-source $ITEM_DIR/mode_switch.sh
 source $ITEM_DIR/spaces.sh
 source $ITEM_DIR/front_app.sh
 
@@ -38,19 +37,12 @@ source $ITEM_DIR/front_app.sh
 
 source $ITEM_DIR/media.sh
 
-##### Right Side Items (shared) #####
+##### Right Side Items #####
 
 source $ITEM_DIR/calendar.sh
+source $ITEM_DIR/pomodoro.sh
 source $ITEM_DIR/volume.sh
 source $ITEM_DIR/battery.sh
-
-##### Mode-Specific Items #####
-
-source $ITEM_DIR/mode_work.sh
-source $ITEM_DIR/mode_code.sh
-
-# Apply initial mode visibility
-"$PLUGIN_DIR/mode_switch.sh" init
 
 ##### Force all scripts to run the first time #####
 sketchybar --update

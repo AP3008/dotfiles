@@ -1,19 +1,12 @@
 #!/bin/bash
 
-MODE=$(cat /tmp/sketchybar_mode 2>/dev/null || echo "work")
-if [ "$MODE" = "work" ]; then
-  DRAWING="on"
-else
-  DRAWING="off"
-fi
-
 # Pomodoro Timer
 sketchybar --add item pomodoro right \
            --set pomodoro \
                  icon="󰔟" \
                  label="25:00" \
                  icon.color=$ACCENT_COLOR \
-                 drawing=$DRAWING \
+                 drawing=on \
                  update_freq=0 \
                  script="$PLUGIN_DIR/pomodoro.sh" \
                  click_script="sketchybar --set pomodoro popup.drawing=toggle" \
@@ -48,13 +41,3 @@ sketchybar --add item pomodoro.reset popup.pomodoro \
                  icon.padding_left=8 \
                  label.padding_right=8 \
                  click_script="$PLUGIN_DIR/pomodoro.sh reset"
-
-# Meeting Indicator (camera/mic in use)
-sketchybar --add item meeting_indicator right \
-           --set meeting_indicator \
-                 icon="󰕧" \
-                 label.drawing=off \
-                 icon.color=0x55ffffff \
-                 drawing=$DRAWING \
-                 update_freq=10 \
-                 script="$PLUGIN_DIR/meeting.sh"
