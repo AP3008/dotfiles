@@ -4,8 +4,9 @@ export WHITE=0xffffffff
 
 # -- Catppuccin Sapphire Scheme --
 export BAR_COLOR=0x00000000
-export ITEM_BG_COLOR=0xcc1e3a5f
+export ITEM_BG_COLOR=0xff8d98b8
 export ACCENT_COLOR=0xff74c7ec
+export CONTRAST_COLOR=0xff1e1e2e
 
 # -- Gray Scheme --
 # export BAR_COLOR=0xff101314

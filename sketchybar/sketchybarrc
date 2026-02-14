@@ -8,7 +8,7 @@ ITEM_DIR="$CONFIG_DIR/items"
 FONT="Iosevka Nerd Font"
 
 ##### Bar Appearance #####
-sketchybar --bar position=top height=37 blur_radius=30 color=$BAR_COLOR
+sketchybar --bar position=top height=37 blur_radius=0 color=$BAR_COLOR shadow=off
 
 ##### Changing Defaults #####
 default=(
