@@ -43,3 +43,4 @@ export CONTRAST_COLOR=0xff1e1e2e
 # export BAR_COLOR=0xff2d2b02
 # export ITEM_BG_COLOR=0xff8e7e0a
 # export ACCENT_COLOR=0xfff7fc17
+
