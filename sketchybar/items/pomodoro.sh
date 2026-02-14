@@ -5,7 +5,7 @@ sketchybar --add item pomodoro right \
            --set pomodoro \
                  icon="󰔟" \
                  label="25:00" \
-                 icon.color=$ACCENT_COLOR \
+                 icon.color=$WHITE \
                  drawing=on \
                  update_freq=0 \
                  script="$PLUGIN_DIR/pomodoro.sh" \
