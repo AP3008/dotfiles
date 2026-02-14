@@ -2,10 +2,10 @@
 
 export WHITE=0xffffffff
 
-# -- Teal Scheme --
-export BAR_COLOR=0x991e1e2e
-export ITEM_BG_COLOR=0xcc313244
-export ACCENT_COLOR=0xffcba6f7
+# -- Catppuccin Sapphire Scheme --
+export BAR_COLOR=0x00000000
+export ITEM_BG_COLOR=0xcc1e3a5f
+export ACCENT_COLOR=0xff74c7ec
 
 # -- Gray Scheme --
 # export BAR_COLOR=0xff101314
