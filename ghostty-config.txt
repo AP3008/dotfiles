@@ -1,7 +1,7 @@
 # --- Ghostty Configuration 1.2.3 ---
 
 # Theme & Appearance
-theme = Catppuccin Mocha
+theme = Rose Pine
 background-opacity = 1
 window-colorspace = display-p3
 macos-titlebar-style = transparent
@@ -51,3 +51,4 @@ keybind = alt+down=goto_split:bottom
 # Custom Text Inputs
 # Fixes potential newline issues in some shells
 keybind = shift+enter=text:\n
+
