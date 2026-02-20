@@ -15,3 +15,7 @@ I use lazy as a package manager and these are just my nvim plugins in lua.
 ## Tmux
 
 I use tmux on my terminal, and these are my keybindings and plugins I use so it works well with nvim.
+
+## I WILL CREATE AN install.sh
+
+eventually...
