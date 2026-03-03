@@ -17,6 +17,7 @@ return {
 					"cssls",
 					"bashls",
 					"rust_analyzer",
+					"gopls",
 				},
 			})
 		end,
@@ -92,7 +93,7 @@ return {
 				print("Diagnostics: " .. (not is_enabled and "ON" or "OFF"))
 			end, { desc = "Toggle Inline Errors" })
 
-			local servers = { "lua_ls", "basedpyright", "ts_ls", "html", "cssls", "bashls" }
+			local servers = { "lua_ls", "basedpyright", "ts_ls", "html", "cssls", "bashls"}
 
 			vim.lsp.config("*", {
 				capabilities = capabilities,
@@ -111,6 +112,9 @@ return {
 			for _, lsp in ipairs(servers) do
 				vim.lsp.enable(lsp)
 			end
+
+			-- Go lang congigs
+			require("plugins.custom.golsp").setup(capabilities)
 
 			-- Keymaps
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})

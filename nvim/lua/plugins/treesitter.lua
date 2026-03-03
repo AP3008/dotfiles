@@ -18,7 +18,8 @@ return {
                 "markdown", 
                 "markdown_inline", 
                 "vimdoc",
-                "java"
+                "java",
+				"go"
             },
             sync_install = false,
             auto_install = false,
