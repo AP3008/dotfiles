@@ -18,6 +18,7 @@ return {
 					"bashls",
 					"rust_analyzer",
 					"gopls",
+					"svelte",
 				},
 			})
 		end,
@@ -93,7 +94,7 @@ return {
 				print("Diagnostics: " .. (not is_enabled and "ON" or "OFF"))
 			end, { desc = "Toggle Inline Errors" })
 
-			local servers = { "lua_ls", "basedpyright", "ts_ls", "html", "cssls", "bashls"}
+			local servers = { "lua_ls", "basedpyright", "ts_ls", "html", "cssls", "bashls", "svelte"}
 
 			vim.lsp.config("*", {
 				capabilities = capabilities,
