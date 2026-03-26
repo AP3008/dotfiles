@@ -8,7 +8,7 @@ return {
 		Snacks.setup({
 			bigfile = { enabled = false },
 			explorer = { enabled = false },
-			indent = { enabled = false },
+			indent = { enabled = true },
 			input = { enabled = false },
 			picker = { enabled = false },
 			quickfile = { enabled = false },
@@ -65,7 +65,7 @@ return {
 						icon = "󰄬 ",
 						title = "Project TODOs",
 						section = "terminal",
-						cmd = [[result=$(rg --vimgrep "TODO:|FIXME:|HACK:" 2>/dev/null | head -n 8 | while IFS=: read -r file line col rest; do path=$(echo "$file" | rev | cut -d'/' -f1-2 | rev); printf "  \033[36m%s\033[0m \033[35m→\033[0m %s\n" "$path" "$rest"; done); if [ -n "$result" ]; then echo "$result"; else echo "  \033[35mNo TODOs found\033[0m"; fi]],
+						cmd = [[result=$(rg -n --no-heading -g '!node_modules' -g '!*.min.*' -g '!*.lock' -g '!.git' -g '!snacks.lua' -g '!*.json' "// (TODO|FIXME|HACK):|# (TODO|FIXME|HACK):|-- (TODO|FIXME|HACK):" 2>/dev/null | head -n 8 | while IFS= read -r line; do file="${line%%:*}"; rest="${line#*:}"; rest="${rest#*:}"; path=$(basename "$file"); printf "  \033[36m%s\033[0m \033[35m→\033[0m %s\n" "$path" "$rest"; done | cut -c 1-70); if [ -n "$result" ]; then echo "$result"; else echo "  \033[35mNo TODOs found\033[0m"; fi]],
 						height = 8,
 						padding = 1,
 						ttl = 0,

@@ -21,7 +21,7 @@ return {
             procMacro = {
                 enable = true,
             },
-            checkOnSave = {
+            check = {
                 command = "clippy",
             },
             -- 4. This specifically addresses the "not in module tree" error
